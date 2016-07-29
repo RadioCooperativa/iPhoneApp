@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import AVFoundation
+
 
 
 class ViewController: UIViewController, UIWebViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 {
-    var playerItem:AVPlayerItem?
-    var player:AVPlayer?
     
+   
     
     // url to load
     let urlString : String = "http://m.cooperativa.cl"
@@ -57,12 +56,6 @@ class ViewController: UIViewController, UIWebViewDelegate,UIImagePickerControlle
         }
         
         
-        let url = NSURL(string: "http://tunein.digitalproserver.com/cooperativa.mp3")
-        playerItem = AVPlayerItem(URL: url!)
-        player=AVPlayer(playerItem: playerItem!)
-        let playerLayer=AVPlayerLayer(player: player!)
-        playerLayer.frame=CGRectMake(0, 0, 300, 50)
-        self.view.layer.addSublayer(playerLayer)
         
     }
     
